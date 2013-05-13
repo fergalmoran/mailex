@@ -16,5 +16,4 @@ optional arguments:
                         Mail subject
   -b [MAIL_BODY], --mail-body [MAIL_BODY]
                         Mail body
-fergalm@FERGAL-NIX-LT ~/Dropbox/Private/mailex $ 
 
