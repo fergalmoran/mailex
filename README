@@ -1,0 +1,20 @@
+Simple python script to send email with attachments from the command line
+
+usage: mailex.py [-h] [-v] -t TO_ADDRESS [-f [FROM_ADDRESS]] [-a ATTACHMENTS]
+                 [-s [SUBJECT]] [-b [MAIL_BODY]]
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -v, --version         show program's version number and exit
+  -t TO_ADDRESS, --to-address TO_ADDRESS
+                        To address
+  -f [FROM_ADDRESS], --from-address [FROM_ADDRESS]
+                        From address
+  -a ATTACHMENTS, --attachments ATTACHMENTS
+                        File(s) to attach
+  -s [SUBJECT], --subject [SUBJECT]
+                        Mail subject
+  -b [MAIL_BODY], --mail-body [MAIL_BODY]
+                        Mail body
+fergalm@FERGAL-NIX-LT ~/Dropbox/Private/mailex $ 
+
