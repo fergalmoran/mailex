@@ -41,18 +41,18 @@ def _get_default_from():
     return "%s@%s" % (getpass.getuser(), socket.gethostname())
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser()
+    parser = argparse.ArgumentParser(description='Sends email, inclucing attachments, from the command line')
     #commands
     parser.add_argument("-v", "--version", action="version", version="0.1")
 
     #required
-    parser.add_argument("-t", "--to-address", help="To address", required=True)
+    parser.add_argument("-t", "--to-address", metavar="TO", help="To address", required=True)
 
     #optional
-    parser.add_argument("-f", "--from-address", nargs="?", default=_get_default_from(), help="From address")
-    parser.add_argument("-a", "--attachments", help="File(s) to attach")
-    parser.add_argument("-s", "--subject", nargs="?", help="Mail subject", default="")
-    parser.add_argument("-b", "--mail-body", nargs="?", help="Mail body", default="")
+    parser.add_argument("-f", "--from-address", metavar="FROM",  default=_get_default_from(), help="From address")
+    parser.add_argument("-a", "--attachments", nargs="?", help="File(s) to attach")
+    parser.add_argument("-s", "--subject", metavar="SUBJ", help="Mail subject", default="")
+    parser.add_argument("-b", "--mail-body", metavar="BODY", help="Mail body", default="")
     args = parser.parse_args()
 
     #read any piped text
